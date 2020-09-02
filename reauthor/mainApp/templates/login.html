@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>로그인</h1>
+        <div>
+            아이디:
+            <input name="userId" type="text" value=""><br>
+            비밀번호:
+            <input name="password" type="password" value=""><br>
+            <br>
+            <input type="submit" value="로그인"><br><br>
+        </div>
+        {% load socialaccount %}
+        {% load static %}
+        <a href="{% provider_login_url 'naver' %}">
+            <img src="{% static 'login/login_with_naver.PNG' %}" alt="login_with_naver" width="250">
+        </a>
+    </body>
+</html>
