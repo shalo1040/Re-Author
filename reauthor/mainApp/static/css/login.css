@@ -1,0 +1,42 @@
+.input {
+    width: 548px;
+    height: 63px;
+    opacity: 0.5;
+    border-radius: 35px;
+    border: solid 4px #cbcbcb;
+    background-color: #ffffff;
+    color: black;
+}
+
+.button {
+    margin-top: 63px;
+    width: 226px;
+    height: 53px;
+    border-radius: 37px;
+    border: none;
+    background-color: #004eff;
+    color: white;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform : translate(-50%, -50%);
+}
+
+#centerItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#smallText {
+    font-family: Roboto;
+    font-size: 14px;
+    color: #030303;
+}

@@ -1,22 +1,44 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
     <head>
-
+        <title>로그인</title>
+        <link rel="stylesheet" type="text/css" href="{% static '/css/login.css' %}">
     </head>
     <body>
-        <h1>로그인</h1>
-        <div>
-            아이디:
-            <input name="userId" type="text" value=""><br>
-            비밀번호:
-            <input name="password" type="password" value=""><br>
-            <br>
-            <input type="submit" value="로그인"><br><br>
+        <div id="center">
+            <div id="centerItem"> 
+                <form>
+                    <input class="input" type="text" placeholder="ID" name="id"><br><br>
+                    <input class="input" type="password" placeholder="Password" name="password"><br>
+                    <p id="centerItem">
+                        <a id="smallText">아이디 찾기</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a id="smallText">비밀번호 찾기</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a id="smallText">회원가입</a>
+                    </p>
+                    <br>
+                    <p id="centerItem">
+                        <a id="smallText">로그인 상태 유지</a>
+                    </p>
+                    <input class="button" type="submit" value="로그인">
+                </form>
+            </div>
+            <br><br>
+            <div id="centerItem">
+                {% load socialaccount %}
+                {% load static %}
+                <a href="{% provider_login_url 'naver' %}">
+                    <img src="{% static 'login/login_with_naver.PNG' %}" alt="login_with_naver" width="250">
+                </a>
+                &nbsp;
+                <a href="{% url 'kakao' %}">
+                    <img src="{% static 'login/login_with_kakao.PNG' %}" alt="login_with_kakao" width="250">
+                </a>
+                &nbsp;
+                <a href="{% provider_login_url 'google' %}">
+                    <img src="{% static 'login/login_with_google.PNG' %}" alt="login_with_google" width="250">
+                </a>
+            </div>
         </div>
-        {% load socialaccount %}
-        {% load static %}
-        <a href="{% provider_login_url 'naver' %}">
-            <img src="{% static 'login/login_with_naver.PNG' %}" alt="login_with_naver" width="250">
-        </a>
     </body>
 </html>
