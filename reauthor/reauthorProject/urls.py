@@ -25,4 +25,6 @@ urlpatterns = [
     path('', mainApp.views.main, name='main'),
     path('accounts/', include('allauth.urls')),
     path('login/', mainApp.views.login, name="login"),
+    path('kakao/', mainApp.views.kakao, name="kakao"),
+    path('oauth/', mainApp.views.oauth, name="oauth"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -10,14 +10,14 @@
             <div id="centerItem"> 
                 <form>
                     <input class="input" type="text" placeholder="ID" name="id"><br><br>
-                    <input class="input" type="password" placeholder="Password" name="password"><br>
+                    <input class="input" type="password" placeholder="Password" name="password"><br><br>
                     <p id="centerItem">
                         <a id="smallText">아이디 찾기</a> &nbsp;&nbsp;|&nbsp;&nbsp;
                         <a id="smallText">비밀번호 찾기</a> &nbsp;&nbsp;|&nbsp;&nbsp;
                         <a id="smallText">회원가입</a>
                     </p>
-                    <br>
                     <p id="centerItem">
+                        <img src="{% static '/login/stayLogin.png' %}">
                         <a id="smallText">로그인 상태 유지</a>
                     </p>
                     <input class="button" type="submit" value="로그인">
@@ -25,18 +25,17 @@
             </div>
             <br><br>
             <div id="centerItem">
+                <p id="lightText">소셜 계정으로 로그인하기</p>
                 {% load socialaccount %}
                 {% load static %}
-                <a href="{% provider_login_url 'naver' %}">
-                    <img src="{% static 'login/login_with_naver.PNG' %}" alt="login_with_naver" width="250">
-                </a>
-                &nbsp;
-                <a href="{% url 'kakao' %}">
-                    <img src="{% static 'login/login_with_kakao.PNG' %}" alt="login_with_kakao" width="250">
-                </a>
-                &nbsp;
                 <a href="{% provider_login_url 'google' %}">
-                    <img src="{% static 'login/login_with_google.PNG' %}" alt="login_with_google" width="250">
+                    <img src="{% static 'login/google.PNG' %}" alt="login_with_google" width="55">
+                </a>
+                <a href="{% url 'kakao' %}">
+                    <img src="{% static 'login/kakao.PNG' %}" alt="login_with_kakao" width="45">
+                </a>
+                <a href="{% provider_login_url 'naver' %}">
+                    <img src="{% static 'login/naver.PNG' %}" alt="login_with_naver" width="55">
                 </a>
             </div>
         </div>

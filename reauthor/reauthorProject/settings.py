@@ -16,7 +16,6 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -44,6 +43,8 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.naver',
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.kakao',
     
     'mainApp.apps.MainappConfig',
 ]
@@ -87,6 +88,11 @@ TEMPLATES = [
         },
     },
 ]
+
+# TEMPLATE_CONTEXT_PROCESSORS = (
+#     'mainApp.base_settings.REST_API',
+#     'mainApp.base_settings.REDIRECT_URI',
+# )
 
 WSGI_APPLICATION = 'reauthorProject.wsgi.application'
 

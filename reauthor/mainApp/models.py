@@ -17,6 +17,9 @@ class Profile(models.Model):
     def save_user_profile(sender, instance, **kwargs):
         instance.profile.save()
 
+    def __str__(self):
+        return self.user
+
 #등록된 작품 정보
 class Toon(models.Model):
     userID = models.ForeignKey(Profile, on_delete=models.CASCADE)
