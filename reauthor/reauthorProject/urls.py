@@ -22,4 +22,7 @@ import mainApp.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', mainApp.views.main, name='main'),
+    path('upload1/',mainApp.views.upload1, name='upload1'),
+    path('upload2/',mainApp.views.upload2, name='upload2'),
+    path('upload3/',mainApp.views.upload3, name='upload3')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
