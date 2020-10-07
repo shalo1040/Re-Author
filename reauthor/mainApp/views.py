@@ -5,6 +5,7 @@ import requests
 def main(request):
     return render(request, 'home.html')
 
+<<<<<<< HEAD
 def login(request):
     return render(request, 'login.html')
 
@@ -27,3 +28,8 @@ def oauth(request):
     print(str(token_url.text))
 
     return redirect('/')
+=======
+
+def signup(request):
+    return render(request, 'signup.html')
+>>>>>>> d7c6db2c296e4b17900ecf39497f1f19bdcd6947
