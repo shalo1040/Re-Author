@@ -22,4 +22,6 @@ import mainApp.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', mainApp.views.main, name='main'),
+    path('signup/', mainApp.views.signup, name="signup"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
