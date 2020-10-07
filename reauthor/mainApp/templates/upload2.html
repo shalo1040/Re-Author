@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <title>ReAuthor_Upload_1page</title>
+        <style>
+            .body{
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%)
+            }
+            .logo{
+            width: 85.96px;
+            height: 36.99px;
+            padding-left: 10px;
+            margin-left: 8%;
+            margin-right: 0%;
+        }
+        .rightbar{
+            display: flex;
+            flex-direction: column;
+            float: right;
+            justify-items: right;
+            padding-right: 3%;
+            
+        }
+        .circle{
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            margin-bottom: 11px;
+            border: solid 1px #ff772f;
+            background-color: #ff772f;
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.19;
+            letter-spacing: normal;
+            text-align: center;
+            color: #ffffff;
+            float: right;
+        }
+        .circle-non{
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            margin-bottom: 11px;
+            border: solid 2px #ff772f;
+            background-color: #ffffff;
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.19;
+            letter-spacing: normal;
+            text-align: center;
+            float: right;
+        }
+        .MyPage{
+            width: 63px;
+            height: 63px;
+            opacity: 0.8;
+            margin-bottom: 110px;
+            border-radius: 50px;
+            background-color: #004eff;
+            border: 0px;
+            outline: none;
+            font-size: 80%;
+            color: #ffffff;
+            float: right;
+            
+        }
+        #line1{
+            padding-top: 64px;
+            padding-bottom: 0%;
+            margin-left: 0%;
+            margin-right: 0%;
+        }
+        .explainText{
+            width: 244px;
+            height: 32px;
+            font-family: Roboto;
+            font-size: 13px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.15;
+            letter-spacing: normal;
+            text-align: left;
+            color: #030303;
+            margin-left: 20%;
+            margin-top:6%;
+        }
+        .numberform{
+            padding-top: 19px;
+        }
+        .bottomBar{
+            float: right;
+        }
+        .saveBtn{
+            width: 138px;
+            height: 58px;
+            border-radius: 37px;
+            border: solid 1px #004eff;
+            background-color: #ffffff;
+            margin: 33px;
+        }
+        .nextBtn{
+            width: 138px;
+            height: 58px;
+            border-radius: 37px;
+            border: solid 1px #004eff;
+            background-color: #004eff;
+        }
+        .formDiv{
+            display: flex;
+            flex-direction: row;
+            padding-left: 20%;
+        }
+        .formdiv{
+            margin-top: 6%;
+            font-size: 15px;
+            background-color: antiquewhite;
+        }
+        .formdiv_n{
+            margin-top: 6%;
+            font-size: 15px;
+            padding-left: 79px
+            ;
+        }
+        .formSet{
+            padding-top: 28px;
+        }
+        .formSet_thumb{
+            display: inline-block;
+            padding-top: 28px;
+        }
+        #thumbnail{
+            width: 162px;
+            height: 162px;
+            opacity: 0.5;
+            border-radius: 50%;
+            background-color: #707070;
+            text-align: center;
+        }
+        </style>
+    </head>
+    <body background="{% static 'upload_back_2.png' %}" style="background-position: 0 0px; background-repeat: no-repeat; background-size: cover;">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>        
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <nav id="line1">
+            <div>
+                <img class="logo" src="{% static 'img/logofinal.svg' %}" width="86px" height="37px">
+                <div class="rightbar">
+                    <button class="MyPage" ><!--마이페이지-->
+                        로그인
+                        <!-- 마이페이지 링크 추가해야함 --> 
+                    </button>
+                    <div>
+                        <button class="circle-non">1</button>
+                    </div>
+                    <div>
+                        <button class="circle">2</button>
+                    </div>
+                    <div>
+                        <button class="circle-non">3</button>
+                    </div>
+                    
+                </div>    
+            </div>
+        </nav>
+        
+        <div class="explainText">
+            웹툰에 등장하는 등장인물의 소개를 적어주세요. 
+            작가 스토리에서 소개 될 예정입니다!
+            <form class="numberform">
+                <input type="number" placeholder="2" min="2" max="40" step="1" /> 
+            </form>
+        </div>
+        <div class="formDiv">
+            <div class="formdiv">
+                <div class="formSet_thumb">
+                    <button id="thumbnail"><span style="color: #ffffff; font-size: 80px;">+</span></button>
+                </div>
+                <div class="formSet">
+                    <label for="URL">작품URL</label>
+                    <input type="text" id="URL" name="contentURL">
+                </div>
+                <div class="formSet">
+                    <label for="desc">작품설명</label>
+                    <textarea type="text" id="desc" name="contentdesc">
+        
+                    </textarea>
+                </div>
+            </div>
+            <div class="formdiv_n">
+                <div class="formSet">
+                    <button id="thumbnail"><span style="color: #ffffff; font-size: 80px;">+</span></button>
+                </div>
+                <div class="formSet">
+                    <label for="URL">작품URL</label>
+                    <input type="text" id="URL" name="contentURL">
+                </div>
+                <div class="formSet">
+                    <label for="desc">작품설명</label>
+                    <textarea type="text" id="desc" name="contentdesc">
+        
+                    </textarea>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="bottomBar">
+            <button class="saveBtn"><span style="color:  #004eff">저장</span></button>
+            <button class="nextBtn"><span style="color:  #ffff"><a href="{% url 'upload3' %}">다음</a></span></button>
+        </div>
+    </body>
+</html>

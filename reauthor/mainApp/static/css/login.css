@@ -1,0 +1,66 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: white;
+    background-image: url("../login/bg_login_copy.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+img {
+    margin: 0px 5px;
+}
+
+.input {
+    width: 470px;
+    height: 55px;
+    border-radius: 35px;
+    border: solid 4px #cbcbcbb0;
+    outline: none;
+    background-color: #ffffff;
+    color: black;
+    font-size: 17px;
+    padding: 0px 30px;
+}
+
+.button {
+    margin-top: 30px;
+    width: 226px;
+    height: 53px;
+    border-radius: 37px;
+    border: none;
+    outline: none;
+    background-color: #004eff;
+    color: white;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform : translate(-50%, -50%);
+}
+
+#centerItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#smallText {
+    font-family: Roboto;
+    font-size: 14px;
+    color: #030303;
+}
+
+#lightText {
+    font-size: 13px;
+    color: #606060;
+}

@@ -17,9 +17,19 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
+from django.conf.urls import include
 import mainApp.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', mainApp.views.main, name='main'),
+    path('accounts/', include('allauth.urls')),
+    path('login/', mainApp.views.login, name="login"),
+    path('kakao/', mainApp.views.kakao, name="kakao"),
+    path('oauth/', mainApp.views.oauth, name="oauth"),
+    path('signup/', mainApp.views.signup, name="signup"),
+    path('upload1/',mainApp.views.upload1, name='upload1'),
+    path('upload2/',mainApp.views.upload2, name='upload2'),
+    path('upload3/',mainApp.views.upload3, name='upload3'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
