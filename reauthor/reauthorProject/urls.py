@@ -23,13 +23,13 @@ import mainApp.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', mainApp.views.main, name='main'),
-<<<<<<< HEAD
     path('accounts/', include('allauth.urls')),
     path('login/', mainApp.views.login, name="login"),
     path('kakao/', mainApp.views.kakao, name="kakao"),
     path('oauth/', mainApp.views.oauth, name="oauth"),
-=======
     path('signup/', mainApp.views.signup, name="signup"),
->>>>>>> d7c6db2c296e4b17900ecf39497f1f19bdcd6947
+    path('upload1/',mainApp.views.upload1, name='upload1'),
+    path('upload2/',mainApp.views.upload2, name='upload2'),
+    path('upload3/',mainApp.views.upload3, name='upload3'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
