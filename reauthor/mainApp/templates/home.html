@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 {% load static %}
+{% load range %}
 <html>
-    <head>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        <title>ReAuthor</title>
 
-        <style>
-         body{
-             zoom: 1;
-         }
-         .Title{
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>ReAuthor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            zoom: 1;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .Title {
             font-size: 35px;
             width: 200px;
             border: 0px;
@@ -17,8 +24,9 @@
             float: left;
             position: relative;
             left: 30px;
-         }
-        input{
+        }
+
+        input {
             width: 51%;
             height: 56px;
             border-radius: 35px;
@@ -26,7 +34,8 @@
             background-color: #8c62ff;
             margin: 4%;
         }
-        #searchBtn{
+
+        #searchBtn {
             float: inline-end;
             width: 30.3px;
             height: 30.3px;
@@ -34,7 +43,8 @@
             border: solid 1px #004eff;
             background-color: #fbff00;
         }
-        .MyPage{
+
+        .MyPage {
             width: 85px;
             height: 46px;
             opacity: 0.8;
@@ -45,31 +55,35 @@
             font-size: 80%;
             color: #ffffff;
             margin: 10px;
-            
+
         }
-        .MainBox{
-            background-color:darkgray;
+
+        .MainBox {
+            display: inline-block;
+            background-color: darkgray;
             margin-left: 5%;
-            margin-right: 5%;
+            margin-right: 70px;
             padding: 0%;
-            transform: scale();
-            
+            text-align: left;
         }
+
         .box {
             width: 50px;
-            height: 50px; 
+            height: 50px;
             border-radius: 70%;
             overflow: hidden;
             margin: 10px;
             float: right;
         }
-        .Upload{
+
+        .Upload {
             appearance: none;
-            background-color:  #BDBDBD;
+            background-color: #BDBDBD;
             border: none;
             float: center;
         }
-        .logo{
+
+        .logo {
             width: 85.96px;
             height: 36.99px;
             padding-left: 10px;
@@ -77,39 +91,45 @@
             margin-right: 0%;
             background-color: khaki;
         }
-        .navi2{
+
+        .navi2 {
             padding-left: 9%;
             background-color: coral;
             height: 53px;
         }
-        .container{
+
+        .container {
             background-color: blueviolet;
             margin-left: 8%;
             margin-right: 25%;
             margin-bottom: 7%;
         }
-        .childCon{
+
+        .childCon {
             margin-top: 4%;
         }
-        .authorContainer{
+
+        .authorContainer {
             display: flex;
             align-self: flex-start;
             background-color: aquamarine;
-            height: 264px;
         }
-        #uploadIcon{
+
+        #uploadIcon {
             width: 83px;
-            height: 83px; 
+            height: 83px;
             border-radius: 70%;
             margin: 3%;
             overflow: hidden;
             float: left;
         }
-        #notice{
+
+        #notice {
             text-align: left;
         }
-        #line1{
-            
+
+        #line1 {
+
             padding-top: 0%;
             padding-bottom: 0%;
             margin-left: 0%;
@@ -117,52 +137,59 @@
             box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.11);
             background-color: #9c0c5b;
         }
-        #nav2{
-            background-color:  #ffffff;
+
+        #nav2 {
+            background-color: #ffffff;
             padding-left: 2%;
             padding-right: 2%;
             height: 53px;
-            }
-        .navBtn1{
-            background-color:  #ffffff;
         }
-        #nav2span{
+
+        .navBtn1 {
+            background-color: #ffffff;
+        }
+
+        #nav2span {
             padding: 2%;
         }
-        .alarm{
+
+        .alarm {
+            display: inline-block;
             margin-right: 5%;
-            margin-left: 25px;
-            display: flex;
             flex-direction: row;
-            height: 1000px;
             text-align: center;
-            float: right;
             align-items: start;
         }
-        .alarmContainer{
+
+        .alarmContainer {
             display: flex;
             background-color: rgb(251, 255, 0);
         }
-        #authorInfo{
+
+        #authorInfo {
             display: flex;
             flex-direction: column;
             padding: 10px;
             text-align: center;
         }
-        #alarmItem{
-            display:flex;
-            float:right;
+
+        #alarmItem {
+            display: flex;
+            float: right;
         }
-        footer{
+
+        footer {
             height: 200px;
             display: flex;
             flex-direction: column;
             background-color: darkgrey;
         }
-        .footerItem{
+
+        .footerItem {
             margin-top: auto;
         }
-        #title{
+
+        #title {
             width: 73px;
             height: 27px;
             font-family: AppleSDGothicNeoB00;
@@ -175,21 +202,24 @@
             text-align: left;
             color: #707070;
         }
-        .contentBox{
+
+        .contentBox {
             width: 160px;
             height: 111px;
             background-color: antiquewhite;
             object-fit: contain;
         }
-        .contentSet{
-            margin:15px;
-            width:170px;
+
+        .contentSet {
+            margin: 15px;
+            width: 170px;
             float: inline-start;
             background-color: aqua;
             display: flex;
             flex-direction: column;
         }
-        #author{
+
+        #author {
             width: 42px;
             height: 20px;
             font-family: AppleSDGothicNeoUL00;
@@ -202,131 +232,162 @@
             text-align: left;
             color: #707070;
         }
-        </style>
-        <script>
-            var scale = Math.min( availableWidth / contentWidth, availableHeight / contentHeight );
-        </script>
-    </head>
-    <body>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>        
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-        <nav id="line1">
-            <div>
-                <img class="logo" src="{% static 'img/logofinal.svg' %}" width="86px" height="37px">
-                <span class="search">
-                    <input class="searchInput" type="text">
-                    <img src="{% static 'img/searchBtn1x.png' %}" srcset="searchBtn2x.png,searchBtn3x.png" id="searchBtn"><!--검색아이콘-->
-                    <button class="MyPage" ><!--마이페이지-->
-                        로그인
-                        <!-- 마이페이지 링크 추가해야함 --> 
-                    </button>
-                </span>
-            </div>
-        </nav>
-        <!--구분선-->
-        <nav class="navi2"><!--네비게이션-->
-            <button id="nav2" class="nav2Btn1">홈</button>
-            <button id="nav2" class="nav2Btn">작가이야기</button>
-            <button id="nav2" class="nav2Btn">작품</button>
-            <button id="nav2" class="nav2Btn">팬아트</button>
-            <button id="nav2" class="nav2Btn"><a href="{% url 'upload1' %}">업로드</a></button>
-        </nav>
+
+        .center {
+            text-align: center;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+    <script>
+        var scale = Math.min(availableWidth / contentWidth, availableHeight / contentHeight);
+    </script>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <nav id="line1">
+        <div>
+            <img class="logo" src="{% static 'img/logofinal.svg' %}" width="86px" height="37px">
+            <span class="search">
+                <input class="searchInput" type="text">
+                <img src="{% static 'img/searchBtn1x.png' %}" srcset="searchBtn2x.png,searchBtn3x.png" id="searchBtn">
+                <!--검색아이콘-->
+                <button class="MyPage">
+                    <!--마이페이지-->
+                    로그인
+                    <!-- 마이페이지 링크 추가해야함 -->
+                </button>
+            </span>
+        </div>
+    </nav>
+    <!--구분선-->
+    <nav class="navi2">
+        <!--네비게이션-->
+        <button id="nav2" class="nav2Btn1">홈</button>
+        <button id="nav2" class="nav2Btn">작가이야기</button>
+        <button id="nav2" class="nav2Btn">작품</button>
+        <button id="nav2" class="nav2Btn">팬아트</button>
+        <button id="nav2" class="nav2Btn"><a href="{% url 'upload1' %}">업로드</a></button>
+    </nav>
+    <div class="center">
         <div class="MainBox">
-            <aside class="alarm">
-                <div class="childCon">
-                    <!--작가소식-->
-                    <div id="notice">작가공지></div>
-                    <div class="alarmContainer">
-                        <div id="authorInfo">
-                            <span id="uploadIcon" style="background: #BDBDBD;"></span>
-                            <span>작가님</span>
-                        </div>
-                        <span id="alarmItem">
-                            타임스퀘어에서 팬싸합니다~
-                        </span>
+            <!--작가이야기-->
+            <div class="childCon">
+                <div>>작가이야기</div>
+                <div class="authorContainer">
+                    {% for j in 1|range:9 %}
+                    <div id="authorInfo">
+                        <span id="uploadIcon" style="background: #BDBDBD;"></span>
+                        <span>작가님</span>
                     </div>
-                    <div class="alarmContainer">
-                        <div id="authorInfo">
-                            <span id="uploadIcon" style="background: #BDBDBD;"></span>
-                            <span>작가님</span>
-                        </div>
-                        <span id="alarmItem">
-                            타임스퀘어에서 팬싸합니다~
-                        </span>
+                    {% endfor %}
+                    <br>
+                </div>
+                <div class="authorContainer">
+                    {% for j in 1|range:9 %}
+                    <div id="authorInfo">
+                        <span id="uploadIcon" style="background: #BDBDBD;"></span>
+                        <span>작가님</span>
                     </div>
-                    <div class="alarmContainer">
-                        <div id="authorInfo">
-                            <span id="uploadIcon" style="background: #BDBDBD;"></span>
-                            <span>작가님</span>
+                    {% endfor %}
+                    <br>
+                </div>
+            </div>
+
+            <div class="childCon">
+                <div>>작품 전체보기</div>
+                <div class="authorContainer">
+                    <div class="contentSet">
+                        <a href="#" class="contentBox">유미의 세포들</a>
+                        <div class="contentText">
+                            <a id="title">유미의 세포들</a>
+                            <a id="author">무빙건</a>
                         </div>
-                        <span id="alarmItem">
-                            타임스퀘어에서 팬싸합니다~
-                        </span>
-                    </div>
-                    <div class="alarmContainer">
-                        <div id="authorInfo">
-                            <span id="uploadIcon" style="background: #BDBDBD;"></span>
-                            <span>작가님</span>
-                        </div>
-                        <span id="alarmItem">
-                            타임스퀘어에서 팬싸합니다~
-                        </span>
-                    </div>
-                    <div class="alarmContainer">
-                        <div id="authorInfo">
-                            <span id="uploadIcon" style="background: #BDBDBD;"></span>
-                            <span>작가님</span>
-                        </div>
-                        <span id="alarmItem">
-                            타임스퀘어에서 팬싸합니다~
-                        </span>
                     </div>
                 </div>
-            </aside>
-            <div class="container">
-                <!--작가이야기-->
-                <div class="childCon">
-                    <div>>작가이야기</div>
-                    <div class="authorContainer">
-                        <div id="authorInfo">
-                            <span id="uploadIcon" style="background: #BDBDBD;"></span>
-                            <span>작가님</span>
+            </div>
+            <!--팬아트-->
+            <div class="childCon">
+                <div>>팬아트</div>
+                <div class="authorContainer">
+                    <div class="contentSet">
+                        <a href="#" class="contentBox">유미의 세포들</a>
+                        <div class="contentText">
+                            <a id="title">유미의 세포들</a>
+                            <a id="author">무빙건</a>
                         </div>
-                    </div>
-                        
-                </div>
-                
-                <div class="childCon">
-                    <div>>작품 전체보기</div>
-                    <div class="authorContainer">
-                        <div class="contentSet">
-                            <a href="#" class="contentBox">유미의 세포들</a>
-                            <div class="contentText">
-                                <a id="title">유미의 세포들</a>
-                                <a id="author">무빙건</a>
-                            </div>
-                        </div>    
-                    </div>
-                </div>
-                <!--팬아트-->
-                <div class="childCon">
-                    <div>>팬아트</div>
-                    <div class="authorContainer">
-                        <div class="contentSet">
-                            <a href="#" class="contentBox">유미의 세포들</a>
-                            <div class="contentText">
-                                <a id="title">유미의 세포들</a>
-                                <a id="author">무빙건</a>
-                            </div>
-                        </div> 
                     </div>
                 </div>
             </div>
         </div>
-        
-        <footer><!--footer-->
-            <div id="footerItem">푸터푸터푸터</div>
-        </footer>
-    </body>
+        <div class="alarm">
+            <div class="childCon">
+                <!--작가소식-->
+                <div id="notice">작가공지></div>
+                <div class="alarmContainer">
+                    <div id="authorInfo">
+                        <span id="uploadIcon" style="background: #BDBDBD;"></span>
+                        <span>작가님</span>
+                    </div>
+                    <span id="alarmItem">
+                        타임스퀘어에서 팬싸합니다~
+                    </span>
+                </div>
+                <div class="alarmContainer">
+                    <div id="authorInfo">
+                        <span id="uploadIcon" style="background: #BDBDBD;"></span>
+                        <span>작가님</span>
+                    </div>
+                    <span id="alarmItem">
+                        타임스퀘어에서 팬싸합니다~
+                    </span>
+                </div>
+                <div class="alarmContainer">
+                    <div id="authorInfo">
+                        <span id="uploadIcon" style="background: #BDBDBD;"></span>
+                        <span>작가님</span>
+                    </div>
+                    <span id="alarmItem">
+                        타임스퀘어에서 팬싸합니다~
+                    </span>
+                </div>
+                <div class="alarmContainer">
+                    <div id="authorInfo">
+                        <span id="uploadIcon" style="background: #BDBDBD;"></span>
+                        <span>작가님</span>
+                    </div>
+                    <span id="alarmItem">
+                        타임스퀘어에서 팬싸합니다~
+                    </span>
+                </div>
+                <div class="alarmContainer">
+                    <div id="authorInfo">
+                        <span id="uploadIcon" style="background: #BDBDBD;"></span>
+                        <span>작가님</span>
+                    </div>
+                    <span id="alarmItem">
+                        타임스퀘어에서 팬싸합니다~
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <footer>
+        <!--footer-->
+        <div id="footerItem">푸터푸터푸터</div>
+    </footer>
+</body>
+
 </html>
