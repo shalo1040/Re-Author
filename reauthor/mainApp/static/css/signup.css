@@ -4,11 +4,17 @@ body {
     background-color: #f5f6f7;
     font-size: 20px;
     font-family: 'Gothic A1', sans-serif;
-    display: fixed;
-    align-items: center;
-    width: 1920px;
 }
-
+div {
+    text-align: center;
+}
+p {
+    display: inline-block;
+}
+label {
+    display: block;
+    text-align: left;
+}
 .logo {
     text-align: center;
     margin-top: 65.3px;
@@ -17,8 +23,7 @@ body {
 }
 /*p class ~ inline*/
 .id, .password, .password-check, .name, .gender, .phone, .email, .authentication {
-    margin-left: 590px;
-
+    
 }
 /*input id*/
 #id, #password, #password-check, #name, #gender, #email, #authentication {
@@ -42,22 +47,15 @@ body {
     font-size: 20px;
   }
 
-
-
-
 /* birthday form */
-#bir_wrap, #bir_main {
-    display: table;
-    margin-left: 590px;
-}
 #bir_wrap {
-margin-bottom: 35px;
+    margin-bottom: 35px;
 }
 /*input box*/
 #bir_yy, #bir_dd, #bir_mm { 
-    display: table-cell;
     width: 240px;
     height: 65px;
+    display:inline-block;
 }
 
 /*input id*/
@@ -76,6 +74,7 @@ margin-bottom: 35px;
 }
 
 #checknumber {
+    display: inline-block;
     all: unset;
     cursor: pointer;
 
@@ -106,9 +105,9 @@ margin-bottom: 35px;
     height: 57px;
 
     text-align: center;
-    font-size: 20px;  
-    margin-left: 848px;
+    font-size: 20px;
     margin-top: 48px;
+    margin-bottom: 100px;
 
     box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
     border: 2px solid (0,0,0, 0.2);
