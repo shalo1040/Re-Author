@@ -39,3 +39,6 @@ def upload2(request):
 
 def upload3(request):
     return render(request,'upload3.html')
+
+def author1(request):
+    return render(request,'author1.html')
