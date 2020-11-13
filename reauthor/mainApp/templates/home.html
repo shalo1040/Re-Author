@@ -6,241 +6,9 @@
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/home.css' %}">
     <title>ReAuthor</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            zoom: 1;
-            max-width: 100%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .Title {
-            font-size: 35px;
-            width: 200px;
-            border: 0px;
-            align-self: center;
-            float: left;
-            position: relative;
-            left: 30px;
-        }
-
-        input {
-            width: 51%;
-            height: 56px;
-            border-radius: 35px;
-            border: solid 5px #004eff;
-            background-color: #8c62ff;
-            margin: 4%;
-        }
-
-        #searchBtn {
-            float: inline-end;
-            width: 30.3px;
-            height: 30.3px;
-            object-fit: contain;
-            border: solid 1px #004eff;
-            background-color: #fbff00;
-        }
-
-        .MyPage {
-            width: 85px;
-            height: 46px;
-            opacity: 0.8;
-            border-radius: 17px;
-            background-color: #004eff;
-            border: 0px;
-            outline: none;
-            font-size: 80%;
-            color: #ffffff;
-            margin: 10px;
-
-        }
-
-        .MainBox {
-            display: inline-block;
-            background-color: darkgray;
-            margin-left: 5%;
-            margin-right: 70px;
-            padding: 0%;
-            text-align: left;
-        }
-
-        .box {
-            width: 50px;
-            height: 50px;
-            border-radius: 70%;
-            overflow: hidden;
-            margin: 10px;
-            float: right;
-        }
-
-        .Upload {
-            appearance: none;
-            background-color: #BDBDBD;
-            border: none;
-            float: center;
-        }
-
-        .logo {
-            width: 85.96px;
-            height: 36.99px;
-            padding-left: 10px;
-            margin-left: 4%;
-            margin-right: 0%;
-            background-color: khaki;
-        }
-
-        .navi2 {
-            padding-left: 9%;
-            background-color: coral;
-            height: 53px;
-        }
-
-        .container {
-            background-color: blueviolet;
-            margin-left: 8%;
-            margin-right: 25%;
-            margin-bottom: 7%;
-        }
-
-        .childCon {
-            margin-top: 4%;
-        }
-
-        .authorContainer {
-            display: flex;
-            align-self: flex-start;
-            background-color: aquamarine;
-        }
-
-        #uploadIcon {
-            width: 83px;
-            height: 83px;
-            border-radius: 70%;
-            margin: 3%;
-            overflow: hidden;
-            float: left;
-        }
-
-        #notice {
-            text-align: left;
-        }
-
-        #line1 {
-
-            padding-top: 0%;
-            padding-bottom: 0%;
-            margin-left: 0%;
-            margin-right: 0%;
-            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.11);
-            background-color: #9c0c5b;
-        }
-
-        #nav2 {
-            background-color: #ffffff;
-            padding-left: 2%;
-            padding-right: 2%;
-            height: 53px;
-        }
-
-        .navBtn1 {
-            background-color: #ffffff;
-        }
-
-        #nav2span {
-            padding: 2%;
-        }
-
-        .alarm {
-            display: inline-block;
-            margin-right: 5%;
-            flex-direction: row;
-            text-align: center;
-            align-items: start;
-        }
-
-        .alarmContainer {
-            display: flex;
-            background-color: rgb(251, 255, 0);
-        }
-
-        #authorInfo {
-            display: flex;
-            flex-direction: column;
-            padding: 10px;
-            text-align: center;
-        }
-
-        #alarmItem {
-            display: flex;
-            float: right;
-        }
-
-        footer {
-            height: 200px;
-            display: flex;
-            flex-direction: column;
-            background-color: darkgrey;
-        }
-
-        .footerItem {
-            margin-top: auto;
-        }
-
-        #title {
-            width: 73px;
-            height: 27px;
-            font-family: AppleSDGothicNeoB00;
-            font-size: 16px;
-            font-weight: normal;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: 1.38;
-            letter-spacing: normal;
-            text-align: left;
-            color: #707070;
-        }
-
-        .contentBox {
-            width: 160px;
-            height: 111px;
-            background-color: antiquewhite;
-            object-fit: contain;
-        }
-
-        .contentSet {
-            margin: 15px;
-            width: 170px;
-            float: inline-start;
-            background-color: aqua;
-            display: flex;
-            flex-direction: column;
-        }
-
-        #author {
-            width: 42px;
-            height: 20px;
-            font-family: AppleSDGothicNeoUL00;
-            font-size: 12px;
-            font-weight: normal;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: 1.31;
-            letter-spacing: normal;
-            text-align: left;
-            color: #707070;
-        }
-
-        .center {
-            text-align: center;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-    </style>
     <script>
         var scale = Math.min(availableWidth / contentWidth, availableHeight / contentHeight);
     </script>
@@ -261,7 +29,7 @@
             <img class="logo" src="{% static 'img/logofinal.svg' %}" width="86px" height="37px">
             <span class="search">
                 <input class="searchInput" type="text">
-                <img src="{% static 'img/searchBtn1x.png' %}" srcset="searchBtn2x.png,searchBtn3x.png" id="searchBtn">
+                <img src="{% static 'img/searchBtn1x.png' %}" id="searchBtn">
                 <!--검색아이콘-->
                 <button class="MyPage">
                     <!--마이페이지-->
@@ -288,7 +56,7 @@
                 <div class="authorContainer">
                     {% for j in 1|range:9 %}
                     <div id="authorInfo">
-                        <span id="uploadIcon" style="background: #BDBDBD;"></span>
+                        <img id="uploadIcon" src="https://uploads.disquscdn.com/images/dc368ebd907dfb3c40406ed0c842b10023f20651969cbd4bf77e524b3bf29ce7.jpg">
                         <span>작가님</span>
                     </div>
                     {% endfor %}
@@ -297,7 +65,7 @@
                 <div class="authorContainer">
                     {% for j in 1|range:9 %}
                     <div id="authorInfo">
-                        <span id="uploadIcon" style="background: #BDBDBD;"></span>
+                        <img id="uploadIcon" src="https://uploads.disquscdn.com/images/dc368ebd907dfb3c40406ed0c842b10023f20651969cbd4bf77e524b3bf29ce7.jpg">
                         <span>작가님</span>
                     </div>
                     {% endfor %}
@@ -306,38 +74,42 @@
             </div>
 
             <div class="childCon">
-                <div>>작품 전체보기</div>
-                <div class="authorContainer">
-                    <div class="contentSet">
-                        <a href="#" class="contentBox">유미의 세포들</a>
-                        <div class="contentText">
-                            <a id="title">유미의 세포들</a>
-                            <a id="author">무빙건</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--팬아트-->
-            <div class="childCon">
                 <div>>팬아트</div>
                 <div class="authorContainer">
+                    {% for j in 1|range:5 %}
                     <div class="contentSet">
-                        <a href="#" class="contentBox">유미의 세포들</a>
+                        <a href="#" class="contentBox">
+                            <img src="{% static 'img/thumbnail.png' %}">
+                        </a>
                         <div class="contentText">
                             <a id="title">유미의 세포들</a>
                             <a id="author">무빙건</a>
                         </div>
                     </div>
+                    {% endfor %}
+                </div>
+                <div class="authorContainer">
+                    {% for j in 1|range:5 %}
+                    <div class="contentSet">
+                        <a href="#" class="contentBox">
+                            <img src="{% static 'img/thumbnail.png' %}">
+                        </a>
+                        <div class="contentText">
+                            <a id="title">유미의 세포들</a>
+                            <a id="author">무빙건</a>
+                        </div>
+                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
         <div class="alarm">
-            <div class="childCon">
+            <div>
                 <!--작가소식-->
                 <div id="notice">작가공지></div>
                 <div class="alarmContainer">
                     <div id="authorInfo">
-                        <span id="uploadIcon" style="background: #BDBDBD;"></span>
+                        <img id="uploadIcon" src="https://uploads.disquscdn.com/images/dc368ebd907dfb3c40406ed0c842b10023f20651969cbd4bf77e524b3bf29ce7.jpg">
                         <span>작가님</span>
                     </div>
                     <span id="alarmItem">
@@ -346,7 +118,7 @@
                 </div>
                 <div class="alarmContainer">
                     <div id="authorInfo">
-                        <span id="uploadIcon" style="background: #BDBDBD;"></span>
+                        <img id="uploadIcon" src="https://uploads.disquscdn.com/images/dc368ebd907dfb3c40406ed0c842b10023f20651969cbd4bf77e524b3bf29ce7.jpg">
                         <span>작가님</span>
                     </div>
                     <span id="alarmItem">
@@ -355,7 +127,7 @@
                 </div>
                 <div class="alarmContainer">
                     <div id="authorInfo">
-                        <span id="uploadIcon" style="background: #BDBDBD;"></span>
+                        <img id="uploadIcon" src="https://uploads.disquscdn.com/images/dc368ebd907dfb3c40406ed0c842b10023f20651969cbd4bf77e524b3bf29ce7.jpg">
                         <span>작가님</span>
                     </div>
                     <span id="alarmItem">
@@ -364,7 +136,7 @@
                 </div>
                 <div class="alarmContainer">
                     <div id="authorInfo">
-                        <span id="uploadIcon" style="background: #BDBDBD;"></span>
+                        <img id="uploadIcon" src="https://uploads.disquscdn.com/images/dc368ebd907dfb3c40406ed0c842b10023f20651969cbd4bf77e524b3bf29ce7.jpg">
                         <span>작가님</span>
                     </div>
                     <span id="alarmItem">
@@ -373,7 +145,7 @@
                 </div>
                 <div class="alarmContainer">
                     <div id="authorInfo">
-                        <span id="uploadIcon" style="background: #BDBDBD;"></span>
+                        <img id="uploadIcon" src="https://uploads.disquscdn.com/images/dc368ebd907dfb3c40406ed0c842b10023f20651969cbd4bf77e524b3bf29ce7.jpg">
                         <span>작가님</span>
                     </div>
                     <span id="alarmItem">
@@ -386,7 +158,7 @@
     <br>
     <footer>
         <!--footer-->
-        <div id="footerItem">푸터푸터푸터</div>
+        <div id="footerItem"></div>
     </footer>
 </body>
 
