@@ -1,0 +1,225 @@
+body {
+    zoom: 1;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Title {
+    font-size: 35px;
+    width: 200px;
+    border: 0px;
+    align-self: center;
+    float: left;
+    position: relative;
+    left: 30px;
+}
+
+input {
+    width: 51%;
+    height: 56px;
+    border-radius: 35px;
+    border: solid 5px #004eff;
+    margin: 4%;
+}
+
+#searchBtn {
+    float: inline-end;
+    width: 30.3px;
+    height: 30.3px;
+    object-fit: contain;
+}
+
+.MyPage {
+    width: 85px;
+    height: 46px;
+    opacity: 0.8;
+    border-radius: 17px;
+    background-color: #004eff;
+    border: 0px;
+    outline: none;
+    font-size: 80%;
+    color: #ffffff;
+    margin: 10px;
+
+}
+
+.MainBox {
+    display: inline-block;
+    margin-left: 5%;
+    margin-right: 70px;
+    padding: 0%;
+    text-align: left;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    border-radius: 70%;
+    overflow: hidden;
+    margin: 10px;
+    float: right;
+}
+
+.Upload {
+    appearance: none;
+    background-color: #BDBDBD;
+    border: none;
+    float: center;
+}
+
+.logo {
+    width: 85.96px;
+    height: 36.99px;
+    padding-left: 10px;
+    margin-left: 4%;
+    margin-right: 0%;
+}
+
+.navi2 {
+    padding-left: 9%;
+    height: 53px;
+    border-bottom-style: solid;
+    border-width: thin;
+}
+
+.container {
+    margin-left: 8%;
+    margin-right: 25%;
+    margin-bottom: 7%;
+}
+
+.childCon {
+    margin-top: 4%;
+    border-style: solid;
+    border-width: thin;
+    padding: 10px;
+}
+
+.authorContainer {
+    display: flex;
+    align-self: flex-start;
+}
+
+#uploadIcon {
+    width: 83px;
+    height: 83px;
+    border-radius: 70%;
+    margin: 3%;
+    overflow: hidden;
+    float: left;
+    object-fit: cover;
+}
+
+#notice {
+    text-align: left;
+}
+
+#line1 {
+    padding-top: 0%;
+    padding-bottom: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.11);
+}
+
+#nav2 {
+    background-color: #ffffff;
+    padding-left: 2%;
+    padding-right: 2%;
+    height: 53px;
+}
+
+.navBtn1 {
+    background-color: #ffffff;
+}
+
+#nav2span {
+    padding: 2%;
+}
+
+.alarm {
+    display: inline-block;
+    margin-right: 5%;
+    flex-direction: row;
+    text-align: center;
+    align-items: start;
+}
+
+.alarmContainer {
+    display: flex;
+    padding: 3px 10px;
+    border-style: solid;
+    border-width: thin;
+    border-color: #707070;
+}
+
+#authorInfo {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+}
+
+#alarmItem {
+    display: flex;
+    float: right;
+}
+
+footer {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: darkgrey;
+}
+
+.footerItem {
+    margin-top: auto;
+}
+
+#title {
+    width: 73px;
+    height: 27px;
+    font-family: AppleSDGothicNeoB00;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    text-align: left;
+    color: #030303;
+}
+
+.contentBox {
+    width: 160px;
+    height: 111px;
+    background-color: antiquewhite;
+    object-fit: contain;
+}
+
+.contentSet {
+    margin: 15px;
+    width: 170px;
+    float: inline-start;
+    display: flex;
+    flex-direction: column;
+}
+
+#author {
+    width: 42px;
+    height: 20px;
+    font-family: AppleSDGothicNeoUL00;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.31;
+    letter-spacing: normal;
+    text-align: left;
+    color: #707070;
+}
+
+.center {
+    text-align: center;
+}
