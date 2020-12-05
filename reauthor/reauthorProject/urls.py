@@ -31,5 +31,6 @@ urlpatterns = [
     path('upload1/',mainApp.views.upload1, name='upload1'),
     path('upload2/',mainApp.views.upload2, name='upload2'),
     path('upload3/',mainApp.views.upload3, name='upload3'),
+    path('author1/',mainApp.views.author1, name='author1'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
